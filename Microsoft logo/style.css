@@ -1,0 +1,61 @@
+:root{
+    --orange: #f25022;
+    --green: #7fba00;
+    --yellow: #ffb900;
+    --blue: #004aef;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    background-color: #000;
+}
+.microsoft {
+    width: 310px;
+    height: 310px;
+}
+.microsoft::before {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: var(--orange);
+    animation: loop 4s ease-in-out infinite;
+}
+
+@keyframes loop {
+    0%{
+        box-shadow: 0 0 0 var(--green),
+        0 0 0 var(--yellow),
+        0 0 0 var(--blue);
+    }
+    20%{
+        box-shadow: 160px 0 0 var(--green),
+        160px 0 0 var(--yellow),
+        160px 0 0 var(--blue);
+    }
+    40%{
+        box-shadow: 160px 0 0 var(--green),
+        160px 160px 0 var(--yellow),
+        160px 160px 0 var(--blue);
+    }
+    60%{
+        box-shadow: 160px 0 0 var(--green),
+        160px 160px 0 var(--yellow),
+        0 160px 0 var(--blue);
+    }
+    80%{
+        box-shadow: 160px 0 0 var(--green),
+        160px 160px 0 var(--yellow),
+        0 160px 0 var(--blue);
+    }
+    90%{
+        box-shadow: none;
+    }
+    100% {
+       box-shadow: none;
+    }
+}
