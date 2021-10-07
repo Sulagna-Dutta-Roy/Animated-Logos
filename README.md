@@ -1,5 +1,5 @@
 <h1>First folder containes Microsoft Logo</h1>
-<h1>Second folder contains Google Logo</h2>
+<h1>Second folder contains Google Logo</h1>
 
 <h2>Tech stack used:</h2>
 
