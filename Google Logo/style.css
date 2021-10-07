@@ -1,0 +1,65 @@
+:root{
+    --orange: #f25022;
+    --green: #7fba00;
+    --yellow: #ffb900;
+    --blue: #004aef;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    margin: 0;
+    width: 100%;
+    background-color: #fff;
+}
+#google {
+    font-size: 50px;
+    width: 3em;
+    height: 3em;
+    position: absolute;
+    border-radius: 50%;
+    background: #fff;
+    border-top: 1em solid #ea4335;
+    border-right: 1em solid #4285f4;
+    border-bottom: 1em solid #34a853;
+    border-left: 1em solid #fbbc05;
+    animation: animate-font 5s ease-in-out infinite;
+}
+#google::before {
+    content: '';
+    width: 2.45em;
+    height: 1em;
+    position: absolute;
+    z-index: 100;
+    background-color: #4285f4;
+    transform: translateY(-50%);
+    top: 50%;
+    right: -0.95em;
+}
+#google::after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -1em;
+    right: -1em;
+    z-index: 0;
+    border-top: 2em solid transparent;
+    border-right: 2em solid #fff;
+}
+
+@keyframes animate-font {
+    0%{
+        opacity: 0.2;
+        transform: rotate(360deg) scale(0);
+    }
+    50%{
+        opacity: 0.5;
+        transform: rotate(180deg) scale(50%);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(100%);
+    }
+}
